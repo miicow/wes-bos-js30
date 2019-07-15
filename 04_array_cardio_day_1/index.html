@@ -148,6 +148,16 @@
         'car',
         'truck'
       ];
+
+      const transportationMethod = data.reduce((obj, item) => {
+        if (!obj[item]) {
+          obj[item] = 0;
+        }
+        obj[item]++;
+        return obj;
+      }, {});
+
+      console.log(transportationMethod);
     </script>
   </body>
 </html>
